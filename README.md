@@ -12,7 +12,7 @@
 - [Electron](https://github.com/electron/electron) 12.1.1
 - [Vue](https://github.com/vuejs/vue) 2.6.14
 - [electron-vue](https://github.com/SimulatedGREG/electron-vue)
-- [element-ui](https://github.com/ElemeFE/element) 2.15.6,
+- [element-ui](https://github.com/ElemeFE/element) 2.15.6
 - [serialport](https://github.com/serialport/node-serialport) 9.2.1
 
 
@@ -37,7 +37,6 @@ npm run dev
 
 # 生产环境
 npm run build
-
 
 ```
 
