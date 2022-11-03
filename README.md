@@ -27,8 +27,19 @@
 	并执行 npm config set msvs_version 2017
 - 为 Electron 安装并重新编译Node原生模块: npm install --save-dev electron-rebuild 
 
-	若windows下遇到问题，尝试执行 .\node_modules\\.bin\electron-rebuild.cmd
 - npm install -g node-gyp
+
+- 若执行npm install后, node-gyp报错， 提示 "Visual Studio C++ core features" missing 
+	则安装 build工具：执行 npm i -g windows-build-tools
+	此过程若卡在"Still waiting for installer log file...",则去下载目录C:\Users\Administrator\.windows-build-tools,
+	手动运行vs_BuildTools.exe，进入之后选择->单个组件->勾选Node.js MSBuild 支持，下载安装。
+	![界面截图](./imgs/buildTool.png)
+	![界面截图](./imgs/VSInstaller.png)
+	![界面截图](./imgs/MSBuild.png)
+	若仍然报错，则再手动打开vs_BuildTools.exe，安装入下图所示的两个。应该就可以了。
+	![界面截图](./imgs/ENV.png)
+	
+- npm install安装成功后，若windows下构建时提示失败，可尝试执行 .\node_modules\\.bin\electron-rebuild.cmd
 ### 构建
 
 ```
